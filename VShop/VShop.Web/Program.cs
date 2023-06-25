@@ -14,6 +14,8 @@ builder.Services.AddHttpClient<IProductService, ProductService>("ProductApi", c 
     //c.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactory-ProductApi");
 });
 
+builder.Services.AddScoped<IProductService, ProductService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
