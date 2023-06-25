@@ -18,7 +18,7 @@ public class ProductService : IProductService
         _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
     }
 
-    public async Task<IEnumerable<ProductViewModel>> GetAllProducts(string token)
+    public async Task<IEnumerable<ProductViewModel>> GetAllProducts()
     {
         var client = _clientFactory.CreateClient("ProductApi");
 
