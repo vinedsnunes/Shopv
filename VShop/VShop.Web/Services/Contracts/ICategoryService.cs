@@ -1,9 +1,6 @@
 ﻿using VShop.Web.Models;
-
-namespace VShop.Web.Services.Contracts
+namespace VShop.Web.Services.Contracts;
+public interface ICategoryService
 {
-    public interface ICategoryService
-    {
-        Task<IEnumerable<CategoryViewModel>> GetAllCategories();
-    }
+    Task<IEnumerable<CategoryViewModel>> GetAllCategories(string token);
 }
